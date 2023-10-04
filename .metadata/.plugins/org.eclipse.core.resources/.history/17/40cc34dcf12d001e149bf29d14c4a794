@@ -1,0 +1,14 @@
+package other;
+public class ValueClass 
+{
+	public static void main(String[] args) 
+	{
+	  int I=10;
+	  Integer I=Integer.valueOf(I);
+	  //to convert primitive into wrapper class object
+	  System.out.println(I);
+	  
+	  
+	}
+
+}

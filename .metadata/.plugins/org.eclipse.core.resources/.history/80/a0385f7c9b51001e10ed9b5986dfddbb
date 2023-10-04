@@ -1,0 +1,19 @@
+package TestCases;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import resources.BaseClass;
+
+public class VerifyLogin extends BaseClass
+{
+	@Test
+	public void login() throws IOException
+	{
+		driverInitialize();
+		driver.get("https://www.salesforce.com/in/?ir=1");
+		
+	}
+
+}

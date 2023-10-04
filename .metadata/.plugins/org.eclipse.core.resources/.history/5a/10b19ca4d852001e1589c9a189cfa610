@@ -1,0 +1,40 @@
+package TestCases;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import pageObjectModel.LoginPageObjects;
+import resources.BaseClass;
+
+public class VerifyLogin extends BaseClass
+{
+	@Test
+	public void login() throws IOException, InterruptedException
+	{
+		driverInitialize();
+		Thread.sleep(1000);
+		driver.get("https://login.salesforce.com/");
+		Thread.sleep(1000);
+		
+		LoginPageObjects lpo=new LoginPageObjects(driver);
+		
+		lpo.enterUsername().sendKeys("saurabhomane123@gmail.com");
+		
+		Thread.sleep(1000);
+		
+		lpo.enterPassword().sendKeys("saurabh#123");
+		
+		Thread.sleep(1000);
+		
+		lpo.clickOnlogin().click();
+		
+		Thread.sleep(1000);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package other;
+
+public class TypeCasting 
+{
+	public static void main(String[] args)
+	{
+		int i=10;
+		double d=i;
+		System.out.println(d);
+		
+		double d1=20.20;
+		int x=d1;
+		System.out.println(x);
+				
+	}
+
+}

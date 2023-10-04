@@ -1,0 +1,56 @@
+package Selenium1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Link2 {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		
+		WebElement link=driver.findElement(By.xpath("//input[@id='ctl00_mainContent_chk_friendsandfamily']"));
+		System.out.println(link.isDisplayed());
+		System.out.println(link.isEnabled());
+		link.click();
+		System.out.println(link.isSelected());
+		Thread.sleep(1000);
+		
+		WebElement link1=driver.findElement(By.xpath("//label[@for='ctl00_mainContent_chk_SeniorCitizenDiscount']"));
+		System.out.println(link1.isDisplayed());
+		System.out.println(link1.isEnabled());
+		link1.click();
+		System.out.println(link1.isSelected());
+		Thread.sleep(1000);
+		
+		WebElement link2=driver.findElement(By.xpath("//input[@id='ctl00_mainContent_chk_IndArm']"));
+		System.out.println(link2.isDisplayed());
+		System.out.println(link2.isEnabled());
+		link2.click();
+		System.out.println(link2.isSelected());
+		Thread.sleep(1000);
+		
+		WebElement link3=driver.findElement(By.xpath("//input[@id='ctl00_mainContent_chk_StudentDiscount']"));
+		System.out.println(link3.isDisplayed());
+		System.out.println(link3.isEnabled());
+		link3.click();
+		System.out.println(link3.isSelected());
+		Thread.sleep(1000);
+		
+		WebElement link4=driver.findElement(By.xpath("//label[@for='ctl00_mainContent_chk_Unmr']"));
+		System.out.println(link4.isDisplayed());
+		System.out.println(link4.isEnabled());
+		link4.click();
+		System.out.println(link4.isSelected());
+		
+		
+		
+		
+
+	}
+
+}

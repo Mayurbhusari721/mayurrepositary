@@ -1,0 +1,11 @@
+package other;
+public class XxxValueMethod
+{
+	public static void main(String[] args)
+	{
+		int x=50;
+		Integer X=Integer.valueOf(x);
+		System.out.println(X.intValue());
+	}
+
+}

@@ -1,0 +1,29 @@
+package other;
+
+import java.util.ArrayList;
+
+public class ArrayLiatDemo 
+{
+	public static void main(String[] args)
+	{
+		ArrayList<Integer> obj=new ArrayList<Integer>();
+		obj.add(10);
+		obj.add(20);
+		obj.add(30);
+		obj.add(40);
+		obj.add(30);
+		System.out.println(obj);
+		System.out.println(obj.size());
+		System.out.println(obj.get(0));
+		System.out.println(obj.get(3));
+		obj.add(88);
+		System.out.println(obj);
+		obj.remove(2);
+		System.out.println(obj);
+		obj.add(0,33);
+		System.out.println(obj);
+		
+		
+	}
+
+}

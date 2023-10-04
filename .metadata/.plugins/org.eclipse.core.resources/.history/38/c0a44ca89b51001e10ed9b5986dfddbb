@@ -1,0 +1,30 @@
+package TestCases;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import resources.BaseClass;
+
+public class VerifyLogin extends BaseClass
+{
+	@Test
+	public void login() throws IOException, InterruptedException
+	{
+		driverInitialize();
+		Thread.sleep(1000);
+		driver.get("https://www.salesforce.com/in/?ir=1");
+		Thread.sleep(1000);
+		WebElement UN=driver.findElement(By.xpath("//input[@id='username']"));
+		UN.sendKeys("saurabh123@gmail.com");
+		
+		WebElement PWD=driver.findElement(By.xpath("//input[@id='password']"));
+		PWD.sendKeys("Mayur@721");
+		
+		WebElement loginbutton=driver.findElement(By.xpath("//input[@id='Login']"));
+		loginbutton.click();
+	}
+
+}

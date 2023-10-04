@@ -1,0 +1,53 @@
+package TestCases;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import pageObjectModel.LoginPageObjects;
+import resources.BaseClass;
+
+public class VerifyLogin extends BaseClass
+{
+	@Test
+	public void login() throws IOException, InterruptedException
+	{
+		driverInitialize();
+		Thread.sleep(1000);
+		driver.get("https://login.salesforce.com/");
+		Thread.sleep(1000);
+		driver.manage().window().maximize();
+		
+		LoginPageObjects lpo=new LoginPageObjects(driver);
+		
+		lpo.enterUsername().sendKeys("saurabhomane123@gmail.com");
+		
+		Thread.sleep(1000);
+		
+		lpo.enterPassword().sendKeys("saurabh#123");
+		
+		Thread.sleep(1000);
+		
+		lpo.clickOnlogin().click();
+		
+		Thread.sleep(1000);
+		
+		FileInputStream fs=new FileInputStream("C:\\Users\\Mayur Bhusari\\OneDrive\\Desktop\\Handling.xlsx");
+		
+		XSSFWorkbook workbook=new XSSFWorkbook(fs);
+		XSSFSheet sheet=workbook.getSheetAt(0);
+		XSSFRow row=sheet.getRow(0);
+		XSSFCell cell=row.getCell(0);
+		System.out.println(sheet.getRow(0).getCell(0));
+		
+		
+	}
+
+}

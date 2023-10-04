@@ -1,0 +1,16 @@
+package other;
+public class ToStringM {
+	public static void main(String[] args)
+	{
+		int i=100;
+		String s=Integer.toString(i);
+		System.out.println(s.length());
+		System.out.println(s);
+		double d=20.20;
+		String s1=Double.toString(d);
+	    System.out.println(s1);
+	    System.out.println(s1.length());
+
+	}
+
+}

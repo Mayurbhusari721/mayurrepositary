@@ -1,0 +1,10 @@
+package anotherElement;
+
+public class AnotherElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
